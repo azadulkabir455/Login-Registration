@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/hill.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(12, 9, 24, 0.8);
+}
+
+.container .login {
+  width: 60%;
+  height: auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .container .login {
+    width: 100%;
+    margin: 0 20px;
+  }
+}
+
+.container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 662px) {
+  .container .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+}
+
+.container .row .detailsParts {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  border-right: 1px solid #f2f2f2;
+  position: relative;
+  padding-right: 50px;
+}
+
+@media only screen and (max-width: 662px) {
+  .container .row .detailsParts {
+    border-bottom: 1px solid #f2f2f2;
+    border-right: none;
+    text-align: center;
+    padding: 20px;
+    margin: 0 40px;
+  }
+}
+
+.container .row .detailsParts .logo {
+  position: absolute;
+  top: 30%;
+  -webkit-transform: translate(-30%);
+          transform: translate(-30%);
+}
+
+@media only screen and (max-width: 662px) {
+  .container .row .detailsParts .logo {
+    position: static;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+.container .row .detailsParts h1 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 48px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #FF574D;
+}
+
+.container .row .detailsParts p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #f2f2f2;
+}
+
+.container .row .detailsParts .socialIcon {
+  margin-top: 10px;
+}
+
+.container .row .detailsParts .socialIcon .icon {
+  display: inline-block;
+  font-size: 18px;
+  color: #006ADB;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  border: 1px solid #006ADB;
+  background-color: transparent;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  margin: 0 2px;
+}
+
+.container .row .detailsParts .socialIcon .icon:hover {
+  color: #f2f2f2;
+  border: 1px solid #FF574D;
+  background-color: #FF574D;
+}
+
+.container .row .formParts {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  padding-left: 80px;
+}
+
+@media only screen and (max-width: 662px) {
+  .container .row .formParts {
+    padding: 0;
+    padding-top: 40px;
+    margin: 10px 40px;
+  }
+}
+
+.container .row .formParts h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media only screen and (max-width: 662px) {
+  .container .row .formParts h3 {
+    text-align: center;
+  }
+}
+
+.container .row .formParts .from-group input[type="email"], .container .row .formParts .from-group input[type="password"], .container .row .formParts .from-group input[type="text"], .container .row .formParts .from-group input[type="tel"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px 10px;
+  margin: 10px 0;
+  background-color: transparent;
+  border: 1px solid #b2b2b2;
+  border-radius: 4px;
+  outline: none;
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: #d2d2d2;
+}
+
+@media only screen and (max-width: 662px) {
+  .container .row .formParts .from-group input[type="email"], .container .row .formParts .from-group input[type="password"], .container .row .formParts .from-group input[type="text"], .container .row .formParts .from-group input[type="tel"] {
+    padding: 10px 10px;
+  }
+}
+
+.container .row .formParts .from-group input[type="email"]::-webkit-input-placeholder, .container .row .formParts .from-group input[type="password"]::-webkit-input-placeholder, .container .row .formParts .from-group input[type="tel"]::-webkit-input-placeholder, .container .row .formParts .from-group input[type="text"]::-webkit-input-placeholder {
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: #d2d2d2;
+}
+
+.container .row .formParts .from-group input[type="email"]:-ms-input-placeholder, .container .row .formParts .from-group input[type="password"]:-ms-input-placeholder, .container .row .formParts .from-group input[type="tel"]:-ms-input-placeholder, .container .row .formParts .from-group input[type="text"]:-ms-input-placeholder {
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: #d2d2d2;
+}
+
+.container .row .formParts .from-group input[type="email"]::-ms-input-placeholder, .container .row .formParts .from-group input[type="password"]::-ms-input-placeholder, .container .row .formParts .from-group input[type="tel"]::-ms-input-placeholder, .container .row .formParts .from-group input[type="text"]::-ms-input-placeholder {
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: #d2d2d2;
+}
+
+.container .row .formParts .from-group input[type="email"]::placeholder, .container .row .formParts .from-group input[type="password"]::placeholder, .container .row .formParts .from-group input[type="tel"]::placeholder, .container .row .formParts .from-group input[type="text"]::placeholder {
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: #d2d2d2;
+}
+
+@media only screen and (max-width: 662px) {
+  .container .row .formParts .from-group input[type="email"]::-webkit-input-placeholder, .container .row .formParts .from-group input[type="password"]::-webkit-input-placeholder, .container .row .formParts .from-group input[type="tel"]::-webkit-input-placeholder, .container .row .formParts .from-group input[type="text"]::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+  .container .row .formParts .from-group input[type="email"]:-ms-input-placeholder, .container .row .formParts .from-group input[type="password"]:-ms-input-placeholder, .container .row .formParts .from-group input[type="tel"]:-ms-input-placeholder, .container .row .formParts .from-group input[type="text"]:-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .container .row .formParts .from-group input[type="email"]::-ms-input-placeholder, .container .row .formParts .from-group input[type="password"]::-ms-input-placeholder, .container .row .formParts .from-group input[type="tel"]::-ms-input-placeholder, .container .row .formParts .from-group input[type="text"]::-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .container .row .formParts .from-group input[type="email"]::placeholder, .container .row .formParts .from-group input[type="password"]::placeholder, .container .row .formParts .from-group input[type="tel"]::placeholder, .container .row .formParts .from-group input[type="text"]::placeholder {
+    font-size: 12px;
+  }
+}
+
+.container .row .formParts .from-group .checkboxContainer {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+  margin: 10px 0;
+  font-family: 'Roboto';
+  cursor: pointer;
+  font-size: 14px;
+  color: #f2f2f2;
+  text-transform: capitalize;
+}
+
+.container .row .formParts .from-group .checkboxContainer:hover input ~ .checkmark {
+  background-color: #FF574D;
+}
+
+.container .row .formParts .from-group .checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container .row .formParts .from-group .checkboxContainer input:checked ~ .checkmark {
+  background-color: #FF574D;
+}
+
+.container .row .formParts .from-group .checkboxContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .row .formParts .from-group .checkboxContainer .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: 1px solid #FF574D;
+  border-radius: 4px;
+}
+
+.container .row .formParts .from-group .checkboxContainer .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container .row .formParts .from-group .checkboxContainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.container .row .formParts .from-group .forget {
+  float: right;
+}
+
+.container .row .formParts .from-group .forget a {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  text-decoration: underline;
+  margin: 10px 0;
+  color: #f2f2f2;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.container .row .formParts .from-group .forget a:hover {
+  color: #006ADB;
+}
+
+.container .row .formParts .from-group input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 12px 10px;
+  text-align: center;
+  color: #f2f2f2;
+  background-color: #FF574D;
+  margin: 15px auto;
+  border: 1px solid #FF574D;
+  outline: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 662px) {
+  .container .row .formParts .from-group input[type="submit"] {
+    font-size: 13px;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+.container .row .formParts .from-group input[type="submit"]:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.container .row .formParts p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.container .row .formParts p a {
+  text-decoration: underline;
+  color: #f2f2f2;
+  padding-left: 5px;
+}
+
+.container .row .formParts p a:hover {
+  color: #006ADB;
+}
+/*# sourceMappingURL=style.css.map */

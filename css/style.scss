@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+$fontFamily:'Roboto', sans-serif;
+$fontLogo: 'Abril Fatface', cursive;
+$fontColor: #f2f2f2;
+$primaryColor:#FF574D;
+$secondaryColor: #006ADB;
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('../img/hill.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display:flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(12, 9, 24, 0.8);
+  .login {
+    width: 60%;
+    height: auto;
+    @media only screen and (max-width: 992px) {
+      width: 100%;
+      margin: 0 20px;
+    }
+  }
+  .row {
+    display: flex;
+    align-items: stretch;
+    padding: 30px;
+    @media only screen and (max-width: 662px){
+      flex-flow: column wrap;
+    }
+    .detailsParts {
+      flex-basis: 40%;
+      border-right: 1px solid #f2f2f2;
+      position: relative;
+      padding-right: 50px;
+      @media only screen and (max-width: 662px){
+        border-bottom: 1px solid #f2f2f2;
+        border-right: none;
+        text-align: center;
+        padding: 20px;
+        margin: 0 40px;
+      }
+      .logo {
+        position: absolute;
+        top:30%;
+        transform: translate(-30%);
+        @media only screen and (max-width: 662px){
+          position:static;
+          transform: translate(0);
+        }
+      }
+      h1 {
+        font-family: $fontLogo;
+        font-size: 48px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $primaryColor;
+      }
+      p {
+        font-family: $fontFamily;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 300;
+        color:#f2f2f2;
+      }
+      .socialIcon{
+        margin-top: 10px;
+        .icon{
+          display: inline-block;
+          font-size: 18px;
+          color: $secondaryColor;
+          width: 35px;
+          height: 35px;
+          cursor:pointer;
+          text-align: center;
+          line-height: 35px;
+          border-radius: 50%;
+          border: 1px solid $secondaryColor;
+          background-color: transparent;
+          transition: all .2s ease-in-out;
+          margin: 0 2px;
+        }
+        .icon:hover {
+          color:#f2f2f2;
+          border: 1px solid $primaryColor;
+          background-color: $primaryColor;
+        }
+      }
+    }
+    .formParts {
+      flex-basis: 60%;
+      padding-left: 80px;
+      @media only screen and (max-width: 662px){
+        padding: 0;
+        padding-top: 40px;
+        margin: 10px 40px;
+      }
+     
+      h3 {
+        font-family: $fontFamily;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 40px;
+        text-transform: uppercase;
+        color: #fff;
+        @media only screen and (max-width: 662px){
+          text-align: center;
+        }
+      }
+      .from-group{
+        input[type="email"] , input[type="password"],input[type="text"],input[type="tel"] {
+          width: 100%;
+          border: none;
+          outline: none;
+          padding: 20px 10px;
+          margin: 10px 0;
+          background-color: transparent;
+          border: 1px solid #b2b2b2;
+          border-radius: 4px;
+          outline: none;
+          font-family: 'Roboto';
+          font-size: 16px;
+          color:#d2d2d2;
+          @media only screen and (max-width: 662px){
+           padding: 10px 10px;
+          }
+        }
+        input[type="email"]::placeholder , input[type="password"]::placeholder,input[type="tel"]::placeholder,input[type="text"]::placeholder {
+          font-family: 'Roboto';
+          font-size: 16px;
+          color:#d2d2d2;
+          @media only screen and (max-width: 662px){
+            font-size: 12px;
+          }
+        }
+        .checkboxContainer {
+          display: inline-block;
+          position: relative;
+          padding-left: 20px;
+          margin: 10px 0;
+          font-family: 'Roboto';
+          cursor: pointer;
+          font-size: 14px;
+          color:#f2f2f2;
+          text-transform: capitalize;
+            &:hover input ~ .checkmark {
+              background-color: $primaryColor;
+            }
+            
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            &:checked ~ .checkmark {
+              background-color: $primaryColor;
+            }
+            &:checked ~ .checkmark:after {
+              display:block;
+            }
+          }
+          .checkmark {
+            position: absolute;
+            top:0;
+            left:0;
+            width: 15px;
+            height: 15px;
+            background-color: transparent;
+            border: 1px solid $primaryColor;
+            border-radius: 4px;
+            &:after {
+              content: "";
+              position: absolute;
+              display:none;
+            }
+          }
+          .checkmark:after {
+              left: 9px;
+              top: 5px;
+              width: 4px;
+              height: 8px;
+              border: solid white;
+              border-width: 0 3px 3px 0; 
+              transform: rotate(45deg);
+          }
+
+        }
+        .forget {
+          float: right;
+          a {
+          font-family: $fontFamily;
+          font-size: 14px;
+          text-decoration: underline;
+          margin: 10px 0;
+          color: #f2f2f2;
+          display:inline-block;
+          text-transform: capitalize;
+           &:hover {
+             color: $secondaryColor;
+           }
+          }
+        }
+        input[type="submit"] {
+          display: block;
+          width: 100%;
+          padding: 12px 10px;
+          text-align: center;
+          color: #f2f2f2;
+          background-color: $primaryColor;
+          margin: 15px auto;
+          border: 1px solid $primaryColor;
+          outline: none;
+          border-radius: 4px;
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          transition: all .2s linear;
+          cursor:pointer;
+          @media only screen and (max-width: 662px){
+           font-size: 13px;
+           padding: 10px;
+           width: 100%;
+          }
+          &:hover {
+            transform: scale(.98);
+          }
+          
+        }
+
+      }
+      p {
+        font-family: $fontFamily;
+        font-size: 14px;
+        color:#fff;
+        text-align:center;
+        a {
+          text-decoration: underline;
+          color:#f2f2f2;
+          padding-left: 5px;
+          &:hover {
+            color: $secondaryColor
+          }
+        }
+      }
+    }
+  }
+
+}
